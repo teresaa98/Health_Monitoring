@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 15px;
+  text-align: center;
+  background: #FEFFD2;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  height: 112px;
+  background-color: rgb(85, 175, 202);
+}
+
+.topNavButton{
+  width: 250px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18pt;
+  font-weight: bold;
+  text-decoration: none;
+  width: fixed;
+}
+
+.topNavButton:hover{
+  background-color: #45a049;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+.profileInformation {
+    background-color: rgb(189, 189, 189);
+    width: 760px;
+    height: 320px;
+    margin-right: 16px;
+    margin-top: 20px;
+
+    /*
+    float: auto;
+    */
+}
+.columnBox {
+    overflow-y: scroll;
+    width:200px; 
+    
+}
+
+</style>
+<head>
+
+<div class="header">
+  <h1 style="font-size: 50px"><b>Health Monitoring Application</h1>
+  <p><b>This application will help monitor your wellness! </p>
+</div>
+
+<div class="topnav" style="display: block">
+</br><span style='color:#55AFCA'>"   "</span>
+  <input type="submit" class= "topNavButton" id = "home_page" value="Home">
+  <input type="submit" class= "topNavButton" id = "MTT_page" value="Meet the Team">
+</div>
+
+	<script>
+	<!--alert("hey");-->	
+    document.getElementById("home_page").addEventListener('click', function(){
+        window.document.location = "./index.html";
+    })
+	</script>
+
+	<script>
+    <!--alert("hey");-->	
+    document.getElementById("MTT_page").addEventListener('click', function(){
+        window.document.location = "./test2.html";
+    })
+	</script>
+
+
+<script type="text/javascript">
+window.onload = function() {
+var dps = []; //dataPoints.
+var dps1 = [];
+var dps2 = [];
+
+var chart = new CanvasJS.Chart("chartContainer", {
+title: {
+text: "Blood Sugar Level Chart"
+},
+toolTip: {
+shared: true
+},
+data: [
+{
+type: "line",
+dataPoints: dps
+},
+{
+type: "line",
+dataPoints: dps1
+},
+{
+type: "line",
+dataPoints: dps2
+}
+]
+});
+
+
+
+
+function addDataPointsAndRender() {
+xValue = Number(document.getElementById("xValue").value);
+yValue = Number(document.getElementById("yValue").value);
+
+xValue1 = Number(document.getElementById("xValue1").value);
+yValue1 = Number(document.getElementById("yValue1").value);
+
+xValue2 = Number(document.getElementById("xValue2").value);
+yValue2 = Number(document.getElementById("yValue2").value);
+
+
+dps.push({
+x: xValue,
+y: yValue
+});
+
+dps1.push({
+x: xValue1,
+y: yValue1
+});
+
+dps2.push({
+x: xValue2,
+y: yValue2
+});
+
+chart.render();
+var SumAvg = (yValue + yValue1 + yValue2 )/3;
+document.getElementById("demo").innerHTML = SumAvg;
+
+}
+
+
+var renderButton = document.getElementById("renderButton");
+renderButton.addEventListener("click", addDataPointsAndRender);
+
+}
+</script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet" />
+
+</head>
+
+<body>
+</br>
+
+<b>Enter Month.Day For Fasting:</b>
+<div class='input-group col-sm-5'>
+<input id="xValue" style="width: 225px; height:21px;" class="form-control" type="number" step="any" placeholder=" Enter Month as #.##">
+</div>
+  
+<b>Enter mg/dL For Fasting:</b>
+<div class='input-group col-sm-5'>
+<input id="yValue" style="width: 225px; height:21px;"  class="form-control" type="number" step="any" placeholder="Enter mg/dL">
+</div>
+</br>
+
+<b>Enter Month.DayFor Just Ate:</b>
+<div class='input-group col-sm-5'>
+<input id="xValue1" style="width: 225px; height:21px;"  class="form-control" type="number" step="any" placeholder="Enter Month as #.##">
+</div>
+  
+<b>Enter mg/dL For Just Ate:</b>
+<div class='input-group col-sm-5'>
+<input id="yValue1" style="width: 225px; height:21px;"  class="form-control" type="number" step="any" placeholder="Enter mg/dL">
+</div>
+</br>
+  
+<b>Enter Month.Day For 3 Hours After Eating:</b>
+<div class='input-group col-sm-5'>
+<input id="xValue2" style="width: 225px; height:21px;" class="form-control" type="number" step="any" placeholder="Enter Month as #.##">
+</div>
+  
+<b>Enter mg/dL For 3 Hours After Eating:</b>
+<div class='input-group col-sm-5'>
+<input id="yValue2" style="width: 225px; height:21px;"  class="form-control" type="number" step="any" placeholder="Enter mg/dL">
+</div>
+</br>
+</br>
+  
+<div class='input-group'>
+<button class="btn-danger" style="height:35px;width:80px;" id="renderButton">Submit</button>
+</div>
+  
+ <center> <b>The average of mg/dL is :</b> <b id="demo"><b></center>
+ 
+
+
+  
+</br>
+</br>
+
+<div id="chartContainer" style="height: 270px; width: 100%;">
+</div>
+
+<p> Blue(DataSeries 1) = Fasting
+    </br>
+    Red(DataSeries 2) = Just Ate
+    </br>
+    Green(DataSeries 3) = 3 Hours After Eating</p>
+
+<img src="./profile images\blood_sugar.png" alt="bsl_chart image"
+style="height: 230px;">
+
+<style>
+
+  body{
+    background-color:#FEFFD2;
+  }
+
+  hr{
+    background-color: white;
+    border-style: none;
+    height: 2px;
+  }
+
+</style>
+
+</body>
+
+</html>

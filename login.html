@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Health Monitoring Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+
+
+
+  <div id="login_div" class="main-div">
+    <h3>Health Monitoring Login</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button id="LogintoAccount" onclick="login()">Login to Account</button>
+  </div>
+  
+  <script>
+    <!--alert("hey");-->	
+    document.getElementById("LogintoAccount").addEventListener('click', function(){
+        window.document.location = "./graph.html";
+    })
+</script>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to the Health Monitoring App. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+		apiKey: "AIzaSyBmCo2VqSfOuIkdk8LrHM3VroLasHK5JpY",
+		authDomain: "health-monitoring-438d4.firebaseapp.com",
+		databaseURL: "https://health-monitoring-438d4.firebaseio.com",
+		projectId: "health-monitoring-438d4",
+		storageBucket: "health-monitoring-438d4.appspot.com",
+		messagingSenderId: "665249190955",
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>
+

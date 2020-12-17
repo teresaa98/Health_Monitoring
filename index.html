@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 15px;
+  text-align: center;
+  background: #FEFFD2;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  height: 10%;
+  background-color: rgb(85, 175, 202);
+}
+
+.topNavButton{
+  width: 50px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18pt;
+  font-weight: bold;
+  text-decoration: none;
+  width: fixed;
+}
+
+.topNavButton:hover{
+  background-color: #45a049;
+}
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn { 
+  width: 240px;
+  float: left;
+  float: fixed;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.leftcolumnBox {
+  height: 300px; 
+  overflow-y: scroll;
+  background-color: rgb(173, 173, 173);
+}
+/*  Images that send you to article links */
+.leftcolumnImgLink {
+  width: 150px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 6px;
+  border-color: rgb(85, 175, 202);
+}
+/* Right column */
+.rightcolumn {
+  /*
+  height: 445px;
+  margin-left: 250px;
+  */
+  max-width: 1000px;
+  min-width: 600px;
+  background-color: #f1f1f1;
+}
+
+/* Grey box in About Us Section*/
+.rightColumnTextBox {
+  background-color: rgb(128, 128, 128);
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* BELOW THIS IS THE TEXT  BOXES */
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  width: 250px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1 style="font-size: 50px">Health Monitoring Application</h1>
+  <p><b>This application will help monitor your wellness! </p>
+</div>
+
+<div class="topnav" style="display: block">
+  <input type="submit" class= "topNavButton" id = "home_page" value="Home">
+  <input type="submit" class= "topNavButton" id = "MTT_page" value="Meet the Team">
+</div>
+
+<div class="row" style="display:table;width: 100%;">
+  <!-- LEFT -->
+  <div class="leftcolumn" style="background-color: #e0e0e0">
+    <h2 style="text-align: center;margin-bottom: -15px;">Health Sections</h2>
+      <h5 style="font-size: 10pt;text-align: center;margin-bottom: 10px;">Tips for your everyday life</h5>
+      <div class="leftcolumnBox">
+      <!-- Link 1 -->
+        <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">
+          <img  alt="Blood Levels" class="leftcolumnImgLink" src="https://www.kzoo.edu/praxis/files/2020/03/Screen-Shot-2020-03-31-at-2.39.55-PM.png">
+        </a>
+        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Protect Yourself from <br>COVID-19
+        </p>
+      <!-- Link 2 -->
+        <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1570512/">
+         <img alt="Blood Levels" class="leftcolumnImgLink" src="https://cnet3.cbsistatic.com/img/01ZEIuuXPi1h_-x0bSr1IeFXObw=/1200x630/2020/03/29/74a8ea87-ad93-40a7-9544-f9de29f25424/gettyimages-916358758.jpg">
+        </a>
+        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Estimating Blood Glucose Levels for Diabetics
+        </p>
+      <!-- Link 3 -->
+        <a target="_blank" href="https://www.healthline.com/nutrition/15-ways-to-lower-blood-sugar">
+          <img alt="Joggers" class="leftcolumnImgLink" src="https://i0.wp.com/rakuten.today/wp-content/uploads/2018/10/GettyImages-508299088.jpg?fit=1500%2C1000&ssl=1">
+       </a>  
+       <p style="font-size: 8pt;text-align: center;margin-top: -3px;">15 Ways to <br>Lower Blood Sugar
+       </p>
+     <!-- Link 4 -->
+          <a target="_blank" href="https://www.healthline.com/health/blood-sugar-spike#:~:text=When%20glucose%20builds%20up%20in,unable%20to%20use%20insulin%20effectively." >
+          <img alt="Joggers" class="leftcolumnImgLink" src="https://miro.medium.com/max/4242/1*Om3m6TkNp8-ys9KLHozFsg.jpeg">
+        </a>  
+       <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Recognize and Manage a Blood Sugar Spike
+        </p>
+      <!-- Link 5 -->
+        <a target="_blank" href="http://sleepeducation.org/essentials-in-sleep/healthy-sleep-habits" >
+          <img alt="Joggers" class="leftcolumnImgLink" src="https://1v1d1e1lmiki1lgcvx32p49h8fe-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/woman-man-sleeping-getty.jpg">
+       </a>  
+        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Healthy Sleep Habits
+        </p>
+      </div>
+      <!-- Date of Update -->
+      <p style="font-style: italic;font-size: 8pt;text-align: left;color:rgb(48, 48, 48)">Updated: 11/30/2020</p>
+  </div>
+  <!-- RIGHT -->
+  <div class="rightcolumn" style="background-color: #e0e0e0">
+    <h2 style="text-align: center">About Us</h2>
+    <div class="rightColumnTextBox" style="height:300px;">Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.</div>
+    <p>Some text about our team and what we hope to accomplish. Our goals and aspirations</p>
+  </div>
+</div>
+
+<div>
+<!-- BELOW THIS IS THE TEXT  BOXES -->
+  
+    <input type="submit" id = "signup_page" value="Create Account">
+    <input type="submit" id = "login_page" value="Login">
+  
+</div>
+
+  <script>
+    <!--alert("hey");-->	
+    document.getElementById("login_page").addEventListener('click', function(){
+        window.document.location = "./login.html";
+    })
+</script>
+
+  <script>
+    <!--alert("hey");-->	
+    document.getElementById("signup_page").addEventListener('click', function(){
+        window.document.location = "./signup.html";
+    })
+</script>
+
+  <script>
+    <!--alert("hey");-->	
+    document.getElementById("home_page").addEventListener('click', function(){
+        window.document.location = "./index.html";
+    })
+</script>
+
+  <script>
+    <!--alert("hey");-->	
+    document.getElementById("MTT_page").addEventListener('click', function(){
+        window.document.location = "./test2.html";
+    })
+</script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+		apiKey: "AIzaSyBmCo2VqSfOuIkdk8LrHM3VroLasHK5JpY",
+		authDomain: "health-monitoring-438d4.firebaseapp.com",
+		databaseURL: "https://health-monitoring-438d4.firebaseio.com",
+		projectId: "health-monitoring-438d4",
+		storageBucket: "health-monitoring-438d4.appspot.com",
+		messagingSenderId: "665249190955",
+    };
+    firebase.initializeApp(config);
+	
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    // update firestore settings
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+</html>

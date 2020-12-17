@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 15px;
+  text-align: center;
+  background: #FEFFD2;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  height: 10%;
+  background-color: rgb(85, 175, 202);
+}
+
+.topNavButton{
+  width: 250px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18pt;
+  font-weight: bold;
+  text-decoration: none;
+  width: fixed;
+}
+
+.topNavButton:hover{
+  background-color: #45a049;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.profileInformation {
+    background-color: rgb(189, 189, 189);
+    width: 760px;
+    height: 320px;
+    margin-right: 16px;
+    margin-top: 20px;
+
+    /*
+    float: auto;
+    */
+}
+.columnBox {
+    overflow-y: scroll;
+    width:800px; 
+    
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1 style="font-size: 50px">Health Monitoring Application</h1>
+  <p><b>This application will help monitor your wellness! </p>
+</div>
+
+<div class="topnav" style="display: block">
+  <input type="submit" class= "topNavButton" id = "home_page" value="Home">
+  <input type="submit" class= "topNavButton" id = "MTT_page" value="Meet the Team">
+</div>
+
+<div style="display:table;width: 100px;float: center;">
+  <div class="mainBox" style="background-color: #e0e0e0;">
+    <h2 style="text-align: center;margin-top: -5px;margin-bottom: 5px;font-size: 18pt">Meet the Team</h2>
+    <div class="columnBox">
+      <!-- Profile 1 -->
+        <div class="profileInformation" style="margin-top: -3px;">
+          <img  alt="Profile Image" style="width: 200px;height: 250px;float: left;" src="https://static.wikia.nocookie.net/bts-imagine-fanfic/images/a/ac/Generic-profile-picture.jpg.jpg/revision/latest/scale-to-width-down/1000?cb=20200928042941">
+          <p style="width: 500px;font-size: 18pt; font-weight: bold;float: left;margin-left: 17px;margin-top: 5px;">
+            Job Title</p>
+          <div style="background-color: #45a049;width: 500px;height: 203px;float:left;margin-left: 10px;margin-top: -10px;">
+            <p style="font-size: 12pt;">
+              Description Information</p></div>
+          <h3 style="width: 200px; text-align: center;margin-top: 12px;float: left;font-size: 14pt;float:left">
+            First and Last Name</h3>
+          <p style="width: 500px;font-size: 12pt; font-weight: bold;font-style: italic;float: left;margin-left: 17px;margin-top: 14px;text-align: center;">
+            "Insert a clever quote that will be used in this space below here."</p></div>
+      <!-- Profile 2 -->
+        <div class="profileInformation" style="margin-top: 15px;">
+          <img  alt="Profile Image" style="width: 200px;height: 250px;float: left;" src="./profile images\Markus M.jpg">
+          <p style="width: 500px;font-size: 18pt; font-weight: bold;float: left;margin-left: 17px;margin-top: 5px;">
+            Website Development</p>
+          <div style="background-color: #45a049;width: 500px;height: 203px;float:left;margin-left: 10px;margin-top: -10px;">
+            <p style="font-size: 12pt;">
+              A senior at CSUSB who is just trying to improve there Computer Sceinee skills as mutch as they can.</p></div>
+          <h3 style="width: 200px; text-align: center;margin-top: 12px;float: left;font-size: 14pt;float:left">
+            Markus Moore</h3>
+          <p style="width: 500px;font-size: 12pt; font-weight: bold;font-style: italic;float: left;margin-left: 17px;margin-top: 14px;text-align: center;">
+            "An Apple a Day Keep the Virus Away."</p></div>
+      <!-- Profile 3 -->
+        <div class="profileInformation" style="margin-top: 15px;">
+          <img  alt="Profile Image" style="width: 200px;height: 250px;float: left;" src="https://static.wikia.nocookie.net/bts-imagine-fanfic/images/a/ac/Generic-profile-picture.jpg.jpg/revision/latest/scale-to-width-down/1000?cb=20200928042941">
+          <p style="width: 500px;font-size: 18pt; font-weight: bold;float: left;margin-left: 17px;margin-top: 5px;">
+            Job Title</p>
+          <div style="background-color: #45a049;width: 500px;height: 203px;float:left;margin-left: 10px;margin-top: -10px;">
+            <p style="font-size: 12pt;">
+              Description Information</p></div>
+          <h3 style="width: 200px; text-align: center;margin-top: 12px;float: left;font-size: 14pt;float:left">
+            First and Last Name</h3>
+          <p style="width: 500px;font-size: 12pt; font-weight: bold;font-style: italic;float: left;margin-left: 17px;margin-top: 14px;text-align: center;">
+            "Insert a clever quote that will be used in this space below here."</p></div>
+      <!-- Profile 4 -->
+        <div class="profileInformation" style="margin-top: 15px;">
+          <img  alt="Profile Image" style="width: 200px;height: 250px;float: left;" src="https://static.wikia.nocookie.net/bts-imagine-fanfic/images/a/ac/Generic-profile-picture.jpg.jpg/revision/latest/scale-to-width-down/1000?cb=20200928042941">
+          <p style="width: 500px;font-size: 18pt; font-weight: bold;float: left;margin-left: 17px;margin-top: 5px;">
+            Job Title</p>
+          <div style="background-color: #45a049;width: 500px;height: 203px;float:left;margin-left: 10px;margin-top: -10px;">
+            <p style="font-size: 12pt;">
+              Description Information</p></div>
+          <h3 style="width: 200px; text-align: center;margin-top: 12px;float: left;font-size: 14pt;float:left">
+            First and Last Name</h3>
+          <p style="width: 500px;font-size: 12pt; font-weight: bold;font-style: italic;float: left;margin-left: 17px;margin-top: 14px;text-align: center;">
+            "Insert a clever quote that will be used in this space below here."</p></div>
+      <!-- Profile 5 -->
+        <div class="profileInformation" style="margin-top: 15px;">
+          <img  alt="Profile Image" style="width: 200px;height: 250px;float: left;" src="https://static.wikia.nocookie.net/bts-imagine-fanfic/images/a/ac/Generic-profile-picture.jpg.jpg/revision/latest/scale-to-width-down/1000?cb=20200928042941">
+          <p style="width: 500px;font-size: 18pt; font-weight: bold;float: left;margin-left: 17px;margin-top: 5px;">
+            Job Title</p>
+          <div style="background-color: #45a049;width: 500px;height: 203px;float:left;margin-left: 10px;margin-top: -10px;">
+            <p style="font-size: 12pt;">
+              Description Information</p></div>
+          <h3 style="width: 200px; text-align: center;margin-top: 12px;float: left;font-size: 14pt;float:left">
+            First and Last Name</h3>
+          <p style="width: 500px;font-size: 12pt; font-weight: bold;font-style: italic;float: left;margin-left: 17px;margin-top: 14px;text-align: center;">
+            "Insert a clever quote that will be used in this space below here."</p></div>
+      <!-- Profile 6 -->
+        <div class="profileInformation" style="margin-top: 15px;">
+          <img  alt="Profile Image" style="width: 200px;height: 250px;float: left;" src="https://static.wikia.nocookie.net/bts-imagine-fanfic/images/a/ac/Generic-profile-picture.jpg.jpg/revision/latest/scale-to-width-down/1000?cb=20200928042941">
+          <p style="width: 500px;font-size: 18pt; font-weight: bold;float: left;margin-left: 17px;margin-top: 5px;">
+            Job Title</p>
+          <div style="background-color: #45a049;width: 500px;height: 203px;float:left;margin-left: 10px;margin-top: -10px;">
+            <p style="font-size: 12pt;">
+              Description Information</p></div>
+          <h3 style="width: 200px; text-align: center;margin-top: 12px;float: left;font-size: 14pt;float:left">
+            First and Last Name</h3>
+          <p style="width: 500px;font-size: 12pt; font-weight: bold;font-style: italic;float: left;margin-left: 17px;margin-top: 14px;text-align: center;">
+            "Insert a clever quote that will be used in this space below here."</p></div>
+      <!-- Profile 7 -->
+        <div class="profileInformation" style="margin-top: 15px;">
+          <img  alt="Profile Image" style="width: 200px;height: 250px;float: left;" src="https://static.wikia.nocookie.net/bts-imagine-fanfic/images/a/ac/Generic-profile-picture.jpg.jpg/revision/latest/scale-to-width-down/1000?cb=20200928042941">
+          <p style="width: 500px;font-size: 18pt; font-weight: bold;float: left;margin-left: 17px;margin-top: 5px;">
+            Job Title</p>
+          <div style="background-color: #45a049;width: 500px;height: 203px;float:left;margin-left: 10px;margin-top: -10px;">
+            <p style="font-size: 12pt;">
+              Description Information</p></div>
+          <h3 style="width: 200px; text-align: center;margin-top: 12px;float: left;font-size: 14pt;float:left">
+            First and Last Name</h3>
+          <p style="width: 500px;font-size: 12pt; font-weight: bold;font-style: italic;float: left;margin-left: 17px;margin-top: 14px;text-align: center;">"Insert a clever quote that will be used in this space below here."</p></div>
+	<script>
+	<!--alert("hey");-->	
+    document.getElementById("home_page").addEventListener('click', function(){
+        window.document.location = "./index.html";
+    })
+	</script>
+
+	<script>
+    <!--alert("hey");-->	
+    document.getElementById("MTT_page").addEventListener('click', function(){
+        window.document.location = "./test2.html";
+    })
+	</script>
+   
+   </div>
+  </div>
+</div>
+</body>
+</html>
